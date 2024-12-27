@@ -11,7 +11,6 @@ import {
   Clock,
   DollarSign,
 } from "lucide-react";
-import { CalendlyEmbed } from "@/components/CalendlyEmbed";
 import { GoogleMap } from "@/components/GoogleMap";
 
 export default function DrivingSchoolLanding() {
