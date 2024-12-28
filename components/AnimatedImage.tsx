@@ -6,9 +6,10 @@ import Image from "next/image";
 interface AnimatedImageProps {
   src: string;
   alt: string;
+  className?: string;
 }
 
-export function AnimatedImage({ src, alt }: AnimatedImageProps) {
+export function AnimatedImage({ src, alt, className }: AnimatedImageProps) {
   const imageRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -39,9 +40,9 @@ export function AnimatedImage({ src, alt }: AnimatedImageProps) {
   return (
     <div
       ref={imageRef}
-      className={`shadow-lg transition-all duration-1000 ease-out ${
+      className={`transition-all duration-1000 ease-out ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
-      }`}
+      } ${className || ""}`}
     >
       <Image
         src={src}

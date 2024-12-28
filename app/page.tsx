@@ -20,12 +20,15 @@ import { AnimatedImage } from "@/components/AnimatedImage";
 export default function DrivingSchoolLanding() {
   return (
     <div className="flex flex-col min-h-screen bg-bgColor1">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link className="flex items-center justify-center" href="#">
+      <header className="px-4 lg:px-6 h-14 flex items-center justify-between">
+        <Link
+          className="flex items-center justify-center md:justify-start w-full"
+          href="#"
+        >
           <Car className="h-6 w-6 mr-2" />
           <span className="font-bold">EastVan Driving Academy</span>
         </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
+        <nav className="ml-auto gap-4 sm:gap-6 hidden md:flex">
           <Link
             className="text-sm font-medium hover:underline underline-offset-4"
             href="#features"
@@ -56,7 +59,7 @@ export default function DrivingSchoolLanding() {
         <section className="relative w-full py-12 md:py-24 lg:py-32 xl:py-12 bg-bgColor1">
           {/* Content */}
           <div className="px-4 md:px-6 flex justify-center w-full">
-            <div className="grid grid-cols-2 lg:grid-cols-2 gap-2 lg:gap-4 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 items-center">
               {/* Text Section */}
               <div className="flex-row justify-center items-center space-y-4  text-center ">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl text-textColor1 ">
@@ -116,16 +119,23 @@ export default function DrivingSchoolLanding() {
                 />
               </div>
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+                {/* Image Section */}
+
                 <AnimatedImage
                   src="/images/drivingstudent2.jpg"
                   alt="Experienced instructor explaining road rules"
+                  className="order-last lg:order-first" // Ensure the image is below the card on smaller screens
                 />
+
+                {/* Card Section */}
+
                 <AnimatedCard
                   title="Personalized Lessons"
                   description="Tailored instruction to meet your individual needs and pace."
                   icon={
                     <Users className="h-12 w-12 text-primary text-textColor1" />
-                  } // Pass the icon as JSX element
+                  }
+                  className="order-first lg:order-last" // Ensures card is on top of image on smaller screens
                 />
               </div>
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
@@ -280,8 +290,8 @@ export default function DrivingSchoolLanding() {
                       </div>
                     </div>
                     <p className="text-textColor1">
-                      "{" "}
-                      <span className="font-bold text-textColor1">
+                      "
+                      <span className="font-extrabold text-textColor1">
                         Harkomal
                       </span>{" "}
                       is an energetic and professional driving instructor. He
@@ -313,13 +323,13 @@ export default function DrivingSchoolLanding() {
                     </div>
                     <p className="text-textColor1">
                       "
-                      <span className="font-bold">
+                      <span className="font-extrabold">
                         East Van Driving Academy
                       </span>{" "}
                       is fantastic! Harkomal is an excellent instructor who made
                       driving lessons straightforward and relaxing. His clear
                       instructions and flexible scheduling helped me
-                      <span className="font-bold text-gray-800">
+                      <span className="font-extrabold text-textColor1">
                         {" "}
                         pass my road test
                       </span>{" "}
@@ -354,7 +364,7 @@ export default function DrivingSchoolLanding() {
                       which I truly appreciate. This approach helped me feel
                       comfortable and confident throughout the learning process.
                       I{" "}
-                      <span className="font-bold text-gray-800">
+                      <span className="font-extrabold text-textColor1">
                         {" "}
                         highly recommend
                       </span>{" "}
@@ -387,7 +397,7 @@ export default function DrivingSchoolLanding() {
                     <p className="text-textColor1">
                       "I had my first lesson with East Van Driving School today,
                       and it was an{" "}
-                      <span className="font-bold text-gray-800">
+                      <span className="font-extrabold text-textColor1">
                         {" "}
                         amazing experience!
                       </span>{" "}

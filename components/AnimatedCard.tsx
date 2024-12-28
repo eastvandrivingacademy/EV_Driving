@@ -7,10 +7,16 @@ import * as LucideIcons from "lucide-react";
 interface AnimatedCardProps {
   title: string;
   description: string;
-  icon: JSX.Element; // Pass the icon component directly
+  icon: JSX.Element;
+  className?: string;
 }
 
-export function AnimatedCard({ title, description, icon }: AnimatedCardProps) {
+export function AnimatedCard({
+  title,
+  description,
+  icon,
+  className,
+}: AnimatedCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -43,7 +49,7 @@ export function AnimatedCard({ title, description, icon }: AnimatedCardProps) {
       ref={cardRef}
       className={`transition-all duration-1000 ease-out ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
-      }`}
+      } ${className || ""}`}
     >
       <Card className="h-full text-textColor1">
         <CardContent className="flex flex-col items-center space-y-4 p-6 ">
