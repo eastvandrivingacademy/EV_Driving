@@ -19,7 +19,7 @@ import { AnimatedImage } from "@/components/AnimatedImage";
 
 export default function DrivingSchoolLanding() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-bgColor1">
       <header className="px-4 lg:px-6 h-14 flex items-center">
         <Link className="flex items-center justify-center" href="#">
           <Car className="h-6 w-6 mr-2" />
@@ -53,47 +53,50 @@ export default function DrivingSchoolLanding() {
         </nav>
       </header>
       <main className="flex-1">
-        <section
-          className="relative w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-100 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/bg_img.jpg')" }}
-        >
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black/30"></div>
-
+        <section className="relative w-full py-12 md:py-24 lg:py-32 xl:py-12 bg-bgColor1">
           {/* Content */}
-          <div className="relative container px-4 md:px-6 flex justify-center">
-            <div className="gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px] flex ">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-customColor ">
+          <div className="px-4 md:px-6 flex justify-center w-full">
+            <div className="grid grid-cols-2 lg:grid-cols-2 gap-2 lg:gap-4 items-center">
+              {/* Text Section */}
+              <div className="flex-row justify-center items-center space-y-4  text-center ">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl text-textColor1 ">
                   Learn to Drive with Confidence
                 </h1>
-                <div className="flex items-center justify-center">
-                  <p className="max-w-[600px] text-gray-200 md:text-xl dark:text-gray-400">
-                    Professional driving instruction tailored to your needs.
-                    Start your journey to becoming a safe and confident driver
-                    today.
-                  </p>
-                </div>
+                <p className="w-full md:text-xl text-textColor1 text-center  p-3">
+                  Professional driving instruction tailored to your needs. Start
+                  your journey to becoming a safe and confident driver today.
+                </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
                   <Link href="#contact">
-                    <Button size="lg" className="bg-slate-500">
+                    <Button size="lg" className="bg-textColor1 ">
                       Book a Lesson
                     </Button>
                   </Link>
                 </div>
               </div>
+
+              {/* Image Section */}
+              <div className="flex justify-center ">
+                <img
+                  src="/images/driving_hero.jpg"
+                  alt="Driving"
+                  className="max-w-full h-auto rounded-lg shadow-lg"
+                  width={500}
+                />
+              </div>
             </div>
           </div>
         </section>
+
         <section
           id="features"
-          className="w-full py-12 md:py-24 lg:py-32 bg-customColor2"
+          className="w-full py-12 md:py-24 lg:py-32 bg-white"
         >
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-4">
+          <div className="container px-4 md:px-6 mx-auto">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-4 text-textColor1">
               Why Choose Us?
             </h2>
-            <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 text-center mb-8">
+            <p className="mx-auto max-w-[700px] text-textColor1 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-center mb-8">
               We offer top-notch driving instruction with a focus on safety,
               experience, and personalized learning.
             </p>
@@ -102,7 +105,9 @@ export default function DrivingSchoolLanding() {
                 <AnimatedCard
                   title="Experienced Instructors"
                   description="Learn from certified professionals with years of experience."
-                  icon={<GraduationCap className="h-12 w-12 text-primary" />} // Pass the icon as JSX element
+                  icon={
+                    <GraduationCap className="h-12 w-12 text-primary text-textColor1" />
+                  } // Pass the icon as JSX element
                 />
 
                 <AnimatedImage
@@ -118,14 +123,18 @@ export default function DrivingSchoolLanding() {
                 <AnimatedCard
                   title="Personalized Lessons"
                   description="Tailored instruction to meet your individual needs and pace."
-                  icon={<Users className="h-12 w-12 text-primary" />} // Pass the icon as JSX element
+                  icon={
+                    <Users className="h-12 w-12 text-primary text-textColor1" />
+                  } // Pass the icon as JSX element
                 />
               </div>
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                 <AnimatedCard
                   title="Safety First"
                   description="Our top priority is ensuring your safety on the road."
-                  icon={<Award className="h-12 w-12 text-primary" />} // Pass the icon as JSX element
+                  icon={
+                    <Award className="h-12 w-12 text-primary text-textColor1" />
+                  } // Pass the icon as JSX element
                 />
                 <AnimatedImage
                   src="/images/drivingstudentm3.jpg"
@@ -137,19 +146,19 @@ export default function DrivingSchoolLanding() {
         </section>
         <section
           id="packages"
-          className="w-full py-12 md:py-24 lg:py-32 bg-gray-100"
+          className="w-full py-12 md:py-24 lg:py-32 bg-bgColor1"
         >
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6 mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-4">
               Our Packages
             </h2>
-            <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 text-center mb-8">
+            <p className="mx-auto max-w-[700px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-center mb-8">
               Choose the package that best fits your needs and schedule. All
               packages include personalized instruction from our experienced
               driving instructors.
             </p>
             <div className="grid gap-6 lg:grid-cols-3 lg:gap-12">
-              <Card>
+              <Card className="text-textColor1">
                 <CardHeader className='"flex items-center'>
                   <CardTitle>Basic Package</CardTitle>
                 </CardHeader>
@@ -168,10 +177,10 @@ export default function DrivingSchoolLanding() {
                     </li>
                     <li className="flex items-center justify-center mr-2 h-5 w-5"></li>
                   </ul>
-                  <Button className="w-full">Book Now</Button>
+                  <Button className="w-full bg-textColor1">Book Now</Button>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="text-textColor1">
                 <CardHeader className='"flex items-center'>
                   <CardTitle>Standard Package</CardTitle>
                 </CardHeader>
@@ -195,10 +204,10 @@ export default function DrivingSchoolLanding() {
                       Ideal for most learners
                     </li>
                   </ul>
-                  <Button className="w-full">Book Now</Button>
+                  <Button className="w-full bg-textColor1">Book Now</Button>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="text-textColor1">
                 <CardHeader className='"flex items-center'>
                   <CardTitle>Intensive Package</CardTitle>
                 </CardHeader>
@@ -223,14 +232,17 @@ export default function DrivingSchoolLanding() {
                       Best for intensive learning
                     </li>
                   </ul>
-                  <Button className="w-full">Book Now</Button>
+                  <Button className="w-full bg-textColor1">Book Now</Button>
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
-        <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="flex justify-center mb-8">
+        <section
+          id="testimonials"
+          className="w-full py-12 md:py-24 lg:py-32 bg-white"
+        >
+          <div className="flex justify-center mb-8 bg-white">
             <Image
               src="/images/google_review.png"
               alt="Sarah J."
@@ -239,11 +251,11 @@ export default function DrivingSchoolLanding() {
               className="flex justify-center items-center"
             />
           </div>
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6 text-textColor1 mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-4">
               What Our Students Say
             </h2>
-            <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 text-center mb-8">
+            <p className="mx-auto max-w-[700px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-textColor1 text-center mb-8">
               Don't just take our word for it. Here's what some of our
               successful students have to say about their experience with
               EastVan Driving Academy.
@@ -261,15 +273,17 @@ export default function DrivingSchoolLanding() {
                         className="rounded-full"
                       />
                       <div>
-                        <h3 className="text-lg font-bold">Johnathan C.</h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">
-                          New Driver
-                        </p>
+                        <h3 className="text-lg font-bold text-textColor1">
+                          Johnathan C.
+                        </h3>
+                        <p className="text-sm text-textColor1">New Driver</p>
                       </div>
                     </div>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-textColor1">
                       "{" "}
-                      <span className="font-bold text-gray-800">Harkomal</span>{" "}
+                      <span className="font-bold text-textColor1">
+                        Harkomal
+                      </span>{" "}
                       is an energetic and professional driving instructor. He
                       gave me clear instructions and guided me through my
                       weaknesses. Highly recommended!"
@@ -289,13 +303,15 @@ export default function DrivingSchoolLanding() {
                         className="rounded-full object-cover"
                       />
                       <div>
-                        <h3 className="text-lg font-bold">Rhonda Wall</h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                        <h3 className="text-lg font-bold text-textColor1">
+                          Rhonda Wall
+                        </h3>
+                        <p className="text-sm text-textColor1">
                           Passed First Time
                         </p>
                       </div>
                     </div>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-textColor1">
                       "
                       <span className="font-bold">
                         East Van Driving Academy
@@ -324,13 +340,15 @@ export default function DrivingSchoolLanding() {
                         className="rounded-full"
                       />
                       <div>
-                        <h3 className="text-lg font-bold">Nigel Kumuwende</h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                        <h3 className="text-lg font-bold text-textColor1">
+                          Nigel Kumuwende
+                        </h3>
+                        <p className="text-sm text-textColor1">
                           Passed First Time
                         </p>
                       </div>
                     </div>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-textColor1">
                       "My experience with Harkonal was exceptional. As an
                       instructor, he offers maximum flexibility to learners,
                       which I truly appreciate. This approach helped me feel
@@ -358,13 +376,15 @@ export default function DrivingSchoolLanding() {
                         className="rounded-full"
                       />
                       <div>
-                        <h3 className="text-lg font-bold">Julia Chow</h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                        <h3 className="text-lg font-bold text-textColor1">
+                          Julia Chow
+                        </h3>
+                        <p className="text-sm text-textColor1">
                           Passed First Time
                         </p>
                       </div>
                     </div>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-textColor1">
                       "I had my first lesson with East Van Driving School today,
                       and it was an{" "}
                       <span className="font-bold text-gray-800">
@@ -387,9 +407,9 @@ export default function DrivingSchoolLanding() {
         </section>
         <section
           id="contact"
-          className="w-full py-12 md:py-24 lg:py-32 bg-blue-500"
+          className="w-full py-12 md:py-24 lg:py-32 bg-textColor1"
         >
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">
                 Ready to Get Started?
@@ -400,7 +420,9 @@ export default function DrivingSchoolLanding() {
               </p>
               <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
                 <Link href="#contact">
-                  <Button size="lg">Give us a call today!</Button>
+                  <Button className="bg-white text-textColor1" size="lg">
+                    Give us a call today!
+                  </Button>
                 </Link>
               </div>
             </div>
@@ -411,8 +433,8 @@ export default function DrivingSchoolLanding() {
         </section>
       </main>
 
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500 dark:text-gray-400">
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-textColor1">
+        <p className="text-xs text-gray-200 dark:text-gray-200">
           © 2024 EastVan Driving Academy. All rights reserved.
         </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">

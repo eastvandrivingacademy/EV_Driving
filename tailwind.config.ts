@@ -11,7 +11,15 @@ const config: Config = {
     extend: {
       colors: {
         customColor: "#D9A660",
-        customColor2: "#C7BBA7",
+        customColor2: "#FBF6EF",
+        buttonColor: "#95815F",
+        bgColor1: "#FBF6EF",
+        textColor1: "#714C47",
+
+        text: {
+          DEFAULT: "#714C47", // This sets the default text color
+        },
+
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

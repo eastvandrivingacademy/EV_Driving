@@ -45,8 +45,8 @@ export function AnimatedCard({ title, description, icon }: AnimatedCardProps) {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
       }`}
     >
-      <Card className="h-full">
-        <CardContent className="flex flex-col items-center space-y-4 p-6">
+      <Card className="h-full text-textColor1">
+        <CardContent className="flex flex-col items-center space-y-4 p-6 ">
           {icon} {/* Directly render the icon */}
           <h3 className="text-xl font-bold">{title}</h3>
           <p className="text-center text-gray-500 dark:text-gray-400">

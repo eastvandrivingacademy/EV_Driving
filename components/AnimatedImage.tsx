@@ -39,7 +39,7 @@ export function AnimatedImage({ src, alt }: AnimatedImageProps) {
   return (
     <div
       ref={imageRef}
-      className={`transition-all duration-1000 ease-out ${
+      className={`shadow-lg transition-all duration-1000 ease-out ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
       }`}
     >
