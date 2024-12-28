@@ -10,8 +10,12 @@ import {
   Star,
   Clock,
   DollarSign,
+  GraduationCap,
 } from "lucide-react";
 import { GoogleMap } from "@/components/GoogleMap";
+import "./globals.css";
+import { AnimatedCard } from "@/components/AnimatedCard";
+import { AnimatedImage } from "@/components/AnimatedImage";
 
 export default function DrivingSchoolLanding() {
   return (
@@ -50,33 +54,41 @@ export default function DrivingSchoolLanding() {
       </header>
       <main className="flex-1">
         <section
-          className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-100 bg-cover bg-center"
+          className="relative w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-100 bg-cover bg-center"
           style={{ backgroundImage: "url('/images/bg_img.jpg')" }}
         >
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
-              <div className="flex flex-col justify-center space-y-4 bg-white bg-opacity-75 p-6 rounded-xl">
-                <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    Learn to Drive with Confidence
-                  </h1>
-                  <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/30"></div>
+
+          {/* Content */}
+          <div className="relative container px-4 md:px-6 flex justify-center">
+            <div className="gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px] flex ">
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-customColor ">
+                  Learn to Drive with Confidence
+                </h1>
+                <div className="flex items-center justify-center">
+                  <p className="max-w-[600px] text-gray-200 md:text-xl dark:text-gray-400">
                     Professional driving instruction tailored to your needs.
                     Start your journey to becoming a safe and confident driver
                     today.
                   </p>
                 </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
                   <Link href="#contact">
-                    <Button size="lg">Book a Lesson</Button>
+                    <Button size="lg" className="bg-slate-500">
+                      Book a Lesson
+                    </Button>
                   </Link>
                 </div>
               </div>
             </div>
           </div>
         </section>
-
-        <section id="features" className="w-full py-12 md:py-24 lg:py-32">
+        <section
+          id="features"
+          className="w-full py-12 md:py-24 lg:py-32 bg-customColor2"
+        >
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-4">
               Why Choose Us?
@@ -85,34 +97,41 @@ export default function DrivingSchoolLanding() {
               We offer top-notch driving instruction with a focus on safety,
               experience, and personalized learning.
             </p>
-            <div className="grid gap-6 lg:grid-cols-3 lg:gap-12">
-              <Card>
-                <CardContent className="flex flex-col items-center space-y-2 p-6">
-                  <ShieldCheck className="h-12 w-12 text-blue-500" />
-                  <h3 className="text-xl font-bold">Safety First</h3>
-                  <p className="text-center text-gray-500 dark:text-gray-400">
-                    Our top priority is ensuring your safety on the road.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="flex flex-col items-center space-y-2 p-6">
-                  <Award className="h-12 w-12 text-blue-500" />
-                  <h3 className="text-xl font-bold">Experienced Instructors</h3>
-                  <p className="text-center text-gray-500 dark:text-gray-400">
-                    Learn from certified professionals with years of experience.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="flex flex-col items-center space-y-2 p-6">
-                  <Users className="h-12 w-12 text-blue-500" />
-                  <h3 className="text-xl font-bold">Personalized Lessons</h3>
-                  <p className="text-center text-gray-500 dark:text-gray-400">
-                    Tailored instruction to meet your individual needs and pace.
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="space-y-12">
+              <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+                <AnimatedCard
+                  title="Experienced Instructors"
+                  description="Learn from certified professionals with years of experience."
+                  icon={<GraduationCap className="h-12 w-12 text-primary" />} // Pass the icon as JSX element
+                />
+
+                <AnimatedImage
+                  src="/images/drivingstudent1.jpg"
+                  alt="Student learning to drive safely"
+                />
+              </div>
+              <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+                <AnimatedImage
+                  src="/images/drivingstudent2.jpg"
+                  alt="Experienced instructor explaining road rules"
+                />
+                <AnimatedCard
+                  title="Personalized Lessons"
+                  description="Tailored instruction to meet your individual needs and pace."
+                  icon={<Users className="h-12 w-12 text-primary" />} // Pass the icon as JSX element
+                />
+              </div>
+              <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+                <AnimatedCard
+                  title="Safety First"
+                  description="Our top priority is ensuring your safety on the road."
+                  icon={<Award className="h-12 w-12 text-primary" />} // Pass the icon as JSX element
+                />
+                <AnimatedImage
+                  src="/images/drivingstudentm3.jpg"
+                  alt="Student receiving personalized driving instruction"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -211,6 +230,15 @@ export default function DrivingSchoolLanding() {
           </div>
         </section>
         <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="flex justify-center mb-8">
+            <Image
+              src="/images/google_review.png"
+              alt="Sarah J."
+              width={150}
+              height={150}
+              className="flex justify-center items-center"
+            />
+          </div>
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-4">
               What Our Students Say
@@ -218,7 +246,7 @@ export default function DrivingSchoolLanding() {
             <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 text-center mb-8">
               Don't just take our word for it. Here's what some of our
               successful students have to say about their experience with
-              SafeDrive Academy.
+              EastVan Driving Academy.
             </p>
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
               <Card>
@@ -226,22 +254,25 @@ export default function DrivingSchoolLanding() {
                   <div className="flex flex-col gap-4">
                     <div className="flex items-center gap-4">
                       <Image
-                        src="/images/drivingstudent1.jpg"
+                        src="/images/drivingstudentm4.jpg"
                         alt="Sarah J."
                         width={100}
-                        height={1000}
+                        height={100}
                         className="rounded-full"
                       />
                       <div>
-                        <h3 className="text-lg font-bold">Sarah J.</h3>
+                        <h3 className="text-lg font-bold">Johnathan C.</h3>
                         <p className="text-sm text-gray-500 dark:text-gray-400">
                           New Driver
                         </p>
                       </div>
                     </div>
                     <p className="text-gray-500 dark:text-gray-400">
-                      "I was nervous about learning to drive, but my instructor
-                      made me feel comfortable and confident. Highly recommend!"
+                      "{" "}
+                      <span className="font-bold text-gray-800">Harkomal</span>{" "}
+                      is an energetic and professional driving instructor. He
+                      gave me clear instructions and guided me through my
+                      weaknesses. Highly recommended!"
                     </p>
                   </div>
                 </CardContent>
@@ -255,18 +286,98 @@ export default function DrivingSchoolLanding() {
                         alt="Rhonda R.."
                         width={100}
                         height={100}
-                        className="rounded-full"
+                        className="rounded-full object-cover"
                       />
                       <div>
-                        <h3 className="text-lg font-bold">Rhonda R.</h3>
+                        <h3 className="text-lg font-bold">Rhonda Wall</h3>
                         <p className="text-sm text-gray-500 dark:text-gray-400">
                           Passed First Time
                         </p>
                       </div>
                     </div>
                     <p className="text-gray-500 dark:text-gray-400">
-                      "Thanks to the excellent instruction, I passed my driving
-                      test on the first attempt. Couldn't be happier!"
+                      "
+                      <span className="font-bold">
+                        East Van Driving Academy
+                      </span>{" "}
+                      is fantastic! Harkomal is an excellent instructor who made
+                      driving lessons straightforward and relaxing. His clear
+                      instructions and flexible scheduling helped me
+                      <span className="font-bold text-gray-800">
+                        {" "}
+                        pass my road test
+                      </span>{" "}
+                      with ease. I highly recommend this driving school!"
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex flex-col gap-4">
+                    <div className="flex items-center gap-4">
+                      <Image
+                        src="/images/drivingstudentm3.jpg"
+                        alt="Rhonda R.."
+                        width={100}
+                        height={100}
+                        className="rounded-full"
+                      />
+                      <div>
+                        <h3 className="text-lg font-bold">Nigel Kumuwende</h3>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                          Passed First Time
+                        </p>
+                      </div>
+                    </div>
+                    <p className="text-gray-500 dark:text-gray-400">
+                      "My experience with Harkonal was exceptional. As an
+                      instructor, he offers maximum flexibility to learners,
+                      which I truly appreciate. This approach helped me feel
+                      comfortable and confident throughout the learning process.
+                      I{" "}
+                      <span className="font-bold text-gray-800">
+                        {" "}
+                        highly recommend
+                      </span>{" "}
+                      this school to others seeking a great road test
+                      experience.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex flex-col gap-4">
+                    <div className="flex items-center gap-4">
+                      <Image
+                        src="/images/drivingstudent1.jpg"
+                        alt="Rhonda R.."
+                        width={100}
+                        height={100}
+                        className="rounded-full"
+                      />
+                      <div>
+                        <h3 className="text-lg font-bold">Julia Chow</h3>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                          Passed First Time
+                        </p>
+                      </div>
+                    </div>
+                    <p className="text-gray-500 dark:text-gray-400">
+                      "I had my first lesson with East Van Driving School today,
+                      and it was an{" "}
+                      <span className="font-bold text-gray-800">
+                        {" "}
+                        amazing experience!
+                      </span>{" "}
+                      My instructor, Harkomal, was fantastic. He has excellent
+                      knowledge of driving and made me feel comfortable and
+                      confident. His friendly nature made the lesson enjoyable
+                      and stress-free. I highly recommend East Van Driving
+                      School for anyone looking to learn how to drive. Thank
+                      you, Harkomal, for such a great start to my driving
+                      journey!"
                     </p>
                   </div>
                 </CardContent>
@@ -287,6 +398,11 @@ export default function DrivingSchoolLanding() {
                 Book your first lesson today and take the first step towards
                 becoming a confident driver.
               </p>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
+                <Link href="#contact">
+                  <Button size="lg">Give us a call today!</Button>
+                </Link>
+              </div>
             </div>
             <div className="mx-auto max-w-4xl h-[300px] mt-8 bg-white rounded-lg shadow-lg overflow-hidden">
               <GoogleMap />
@@ -294,6 +410,7 @@ export default function DrivingSchoolLanding() {
           </div>
         </section>
       </main>
+
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-gray-500 dark:text-gray-400">
           © 2024 EastVan Driving Academy. All rights reserved.
