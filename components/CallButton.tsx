@@ -15,7 +15,7 @@ export function CallButton({ children, className, size }: CallButtonProps) {
       size={size}
       onClick={(e) => {
         e.preventDefault(); // Prevents the default button action
-        window.location.href = "tel:+1234567890"; // Trigger phone dialer
+        window.open("tel:+1234567890"); // Open phone dialer without leaving the page
       }}
     >
       {children}
