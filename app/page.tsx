@@ -59,7 +59,7 @@ export default function DrivingSchoolLanding() {
         <section className="relative w-full py-12 md:py-24 lg:py-32 xl:py-12 bg-bgColor1">
           {/* Content */}
           <div className="px-4 md:px-6 flex justify-center w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 items-center">
+            <div className="grid grid-cols-2 lg:grid-cols-2 gap-2 lg:gap-4 items-center">
               {/* Text Section */}
               <div className="flex-row justify-center items-center space-y-4  text-center ">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl text-textColor1 ">
