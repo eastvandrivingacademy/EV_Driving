@@ -13,7 +13,10 @@ export function CallButton({ children, className, size }: CallButtonProps) {
     <Button
       className={className}
       size={size}
-      onClick={() => (window.location.href = "tel:+1234567890")}
+      onClick={(e) => {
+        e.preventDefault(); // Prevents the default button action
+        window.location.href = "tel:+1234567890"; // Trigger phone dialer
+      }}
     >
       {children}
     </Button>
