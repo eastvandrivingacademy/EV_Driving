@@ -16,6 +16,7 @@ import { GoogleMap } from "@/components/GoogleMap";
 import "./globals.css";
 import { AnimatedCard } from "@/components/AnimatedCard";
 import { AnimatedImage } from "@/components/AnimatedImage";
+import { CallButton } from "@/components/CallButton";
 
 export default function DrivingSchoolLanding() {
   return (
@@ -70,11 +71,9 @@ export default function DrivingSchoolLanding() {
                   your journey to becoming a safe and confident driver today.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
-                  <Link href="#contact">
-                    <Button size="lg" className="bg-textColor1 ">
-                      Book a Lesson
-                    </Button>
-                  </Link>
+                  <CallButton size="lg" className="bg-textColor1">
+                    Book a Lesson
+                  </CallButton>
                 </div>
               </div>
 
@@ -187,7 +186,9 @@ export default function DrivingSchoolLanding() {
                     </li>
                     <li className="flex items-center justify-center mr-2 h-5 w-5"></li>
                   </ul>
-                  <Button className="w-full bg-textColor1">Book Now</Button>
+                  <CallButton className="w-full bg-textColor1">
+                    Book Now
+                  </CallButton>
                 </CardContent>
               </Card>
               <Card className="text-textColor1">
@@ -214,7 +215,9 @@ export default function DrivingSchoolLanding() {
                       Ideal for most learners
                     </li>
                   </ul>
-                  <Button className="w-full bg-textColor1">Book Now</Button>
+                  <CallButton className="w-full bg-textColor1">
+                    Book Now
+                  </CallButton>
                 </CardContent>
               </Card>
               <Card className="text-textColor1">
@@ -242,7 +245,9 @@ export default function DrivingSchoolLanding() {
                       Best for intensive learning
                     </li>
                   </ul>
-                  <Button className="w-full bg-textColor1">Book Now</Button>
+                  <CallButton className="w-full bg-textColor1">
+                    Book Now
+                  </CallButton>
                 </CardContent>
               </Card>
             </div>
@@ -430,9 +435,9 @@ export default function DrivingSchoolLanding() {
               </p>
               <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
                 <Link href="#contact">
-                  <Button className="bg-white text-textColor1" size="lg">
+                  <CallButton className="bg-white text-textColor1" size="lg">
                     Give us a call today!
-                  </Button>
+                  </CallButton>
                 </Link>
               </div>
             </div>
