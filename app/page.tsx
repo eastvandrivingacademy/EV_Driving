@@ -434,10 +434,10 @@ export default function DrivingSchoolLanding() {
                 becoming a confident driver.
               </p>
               <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
-                <Link href="tel:+1234567890">
-                  <Button className="bg-white text-textColor1" size="lg">
+                <Link href="#contact">
+                  <CallButton className="bg-white text-textColor1" size="lg">
                     Give us a call today!
-                  </Button>
+                  </CallButton>
                 </Link>
               </div>
             </div>

@@ -15,10 +15,7 @@ export function CallButton({ children, className, size }: CallButtonProps) {
       size={size}
       onClick={(e) => {
         e.preventDefault(); // Prevents the default button action
-        const targetElement = document.getElementById("contact"); // Replace with your target section ID
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the target section
-        }
+        window.open("tel:+1234567890"); // Open phone dialer without leaving the page
       }}
     >
       {children}
