@@ -17,6 +17,7 @@ import "./globals.css";
 import { AnimatedCard } from "@/components/AnimatedCard";
 import { AnimatedImage } from "@/components/AnimatedImage";
 import { CallButton } from "@/components/CallButton";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function DrivingSchoolLanding() {
   return (
@@ -57,6 +58,7 @@ export default function DrivingSchoolLanding() {
         </nav>
       </header>
       <main className="flex-1">
+        <SpeedInsights />
         <section className="relative w-full py-12 md:py-24 lg:py-32 xl:py-12 bg-bgColor1">
           {/* Content */}
           <div className="px-4 md:px-6 flex justify-center w-full">
