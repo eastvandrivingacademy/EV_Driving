@@ -69,8 +69,7 @@ export default function DrivingSchoolLanding() {
         </nav>
       </header>
       <main className="flex-1">
-        <SpeedInsights />
-        <Analytics />
+      
         <section className="relative w-full py-12 md:py-24 lg:py-32 xl:py-12 bg-bgColor1">
           {/* Content */}
           <div className="px-4 md:px-6 flex justify-center w-full">
