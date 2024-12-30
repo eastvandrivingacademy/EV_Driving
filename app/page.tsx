@@ -10,6 +10,7 @@ import {
   Star,
   Clock,
   DollarSign,
+  Heart,
   GraduationCap,
 } from "lucide-react";
 import { GoogleMap } from "@/components/GoogleMap";
@@ -18,7 +19,7 @@ import { AnimatedCard } from "@/components/AnimatedCard";
 import { AnimatedImage } from "@/components/AnimatedImage";
 import { CallButton } from "@/components/CallButton";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 
 export default function DrivingSchoolLanding() {
   return (
@@ -28,8 +29,17 @@ export default function DrivingSchoolLanding() {
           className="flex items-center justify-center md:justify-start w-full"
           href="#"
         >
-          <Car className="h-6 w-6 mr-2" />
-          <span className="font-bold">EastVan Driving Academy</span>
+          {/* <Car className="h-6 w-6 mr-2" />
+          <span className="font-bold">EastVan Driving Academy</span> */}
+          <div className="flex justify-center m-2 bg-bgColor1">
+            <Image
+              src="/images/ev_logo_nobg.png"
+              alt="Sarah J."
+              width={150}
+              height={150}
+              className="flex justify-center items-center"
+            />
+          </div>
         </Link>
         <nav className="ml-auto gap-4 sm:gap-6 hidden md:flex">
           <Link
@@ -178,17 +188,16 @@ export default function DrivingSchoolLanding() {
                 <CardContent className="flex flex-col items-center space-y-4">
                   <div className="flex items-baseline justify-center">
                     <span className="text-5xl font-bold">$85</span>
-                    <span className="ml-1 text-xl text-gray-500">/hour</span>
                   </div>
                   <ul className="space-y-2 text-center">
                     <li className="flex items-center justify-center">
-                      <Clock className="mr-2 h-4 w-4" />1 hour lesson
+                      <Clock className="mr-2 h-4 w-4" />
+                      1.5 hour lesson
                     </li>
                     <li className="flex items-center justify-center">
                       <Car className="mr-2 h-4 w-4" />
                       Suitable for beginners
                     </li>
-                    <li className="flex items-center justify-center mr-2 h-5 w-5"></li>
                   </ul>
                   <CallButton className="w-full bg-textColor1">
                     Book Now
@@ -201,19 +210,13 @@ export default function DrivingSchoolLanding() {
                 </CardHeader>
                 <CardContent className="flex flex-col items-center space-y-4">
                   <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold">$150</span>
-                    <span className="ml-1 text-xl text-gray-500">
-                      /1.5 hours
-                    </span>
+                    <span className="text-5xl font-bold">$110</span>
                   </div>
                   <ul className="space-y-2 text-center">
                     <li className="flex items-center justify-center">
-                      <Clock className="mr-2 h-4 w-4" />5 hours of lessons
+                      <Clock className="mr-2 h-4 w-4" />2 hour of lesson
                     </li>
-                    <li className="flex items-center justify-center">
-                      <DollarSign className="mr-2 h-4 w-4" />
-                      Save $50
-                    </li>
+
                     <li className="flex items-center justify-center">
                       <Car className="mr-2 h-4 w-4" />
                       Ideal for most learners
@@ -226,27 +229,20 @@ export default function DrivingSchoolLanding() {
               </Card>
               <Card className="text-textColor1">
                 <CardHeader className='"flex items-center'>
-                  <CardTitle>Intensive Package</CardTitle>
+                  <CardTitle>Road Test Package</CardTitle>
                 </CardHeader>
                 <CardContent className="flex flex-col items-center space-y-4">
                   <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold">$200</span>
-                    <span className="ml-1 text-xl text-gray-500">
-                      /2.5 hours
-                    </span>
+                    <span className="text-5xl font-bold">$150</span>
                   </div>
                   <ul className="space-y-2 text-center">
                     <li className="flex items-center justify-center">
-                      <Clock className="mr-2 h-4 w-4" />
-                      10 hours of lessons
-                    </li>
-                    <li className="flex items-center justify-center">
-                      <DollarSign className="mr-2 h-4 w-4" />
-                      Save $150
+                      <Clock className="mr-2 h-4 w-4" />1 hour lesson before
+                      road test
                     </li>
                     <li className="flex items-center justify-center">
                       <Car className="mr-2 h-4 w-4" />
-                      Best for intensive learning
+                      Car provided for road test
                     </li>
                   </ul>
                   <CallButton className="w-full bg-textColor1">
@@ -255,6 +251,10 @@ export default function DrivingSchoolLanding() {
                 </CardContent>
               </Card>
             </div>
+            <h2 className="text-xl font-medium tracking-tighter sm:text-3xl text-center m-4">
+              Receive a $50 discount for booking 5 lessons and $100 for 10
+              lessons today!
+            </h2>
           </div>
         </section>
         <section
@@ -281,143 +281,144 @@ export default function DrivingSchoolLanding() {
             </p>
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
               <Card>
-                <CardContent className="p-6">
-                  <div className="flex flex-col gap-4">
-                    <div className="flex items-center gap-4">
-                      <Image
-                        src="/images/drivingstudentm4.jpg"
-                        alt="Sarah J."
-                        width={100}
-                        height={100}
-                        className="rounded-full"
+                <CardContent className="p-6 h-full">
+                  <div className="flex flex-col gap-4 h-full">
+                    <div className="flex flex-col xl:flex-row items-center gap-4 justify-center">
+                      <img
+                        src="/images/student1.jpeg"
+                        alt="Julia Chow"
+                        className="rounded-lg w-full md:w-auto max-w-[300px]"
                       />
                       <div>
-                        <h3 className="text-lg font-bold text-textColor1">
-                          Johnathan C.
-                        </h3>
-                        <p className="text-sm text-textColor1">New Driver</p>
+                        <div className="mb-2">
+                          <h3 className="text-lg font-bold text-textColor1">
+                            Adrian R.
+                          </h3>
+                          <p className="text-sm text-textColor1">
+                            Passed First Time
+                          </p>
+                        </div>
+                        <p className="text-textColor1">
+                          "
+                          <span className="font-extrabold">
+                            East Van Driving Academy
+                          </span>{" "}
+                          is fantastic! Harkomal is an excellent instructor who
+                          made driving lessons straightforward and relaxing. His
+                          clear instructions and flexible scheduling helped me
+                          <span className="font-extrabold text-textColor1">
+                            {" "}
+                            pass my road test
+                          </span>{" "}
+                          with ease. I highly recommend this driving school!"
+                        </p>
                       </div>
                     </div>
-                    <p className="text-textColor1">
-                      "
-                      <span className="font-extrabold text-textColor1">
-                        Harkomal
-                      </span>{" "}
-                      is an energetic and professional driving instructor. He
-                      gave me clear instructions and guided me through my
-                      weaknesses. Highly recommended!"
-                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-6 h-full">
+                  <div className="flex flex-col gap-4 h-full">
+                    <div className="flex flex-col xl:flex-row items-center gap-4 justify-center">
+                      <img
+                        src="/images/student2.jpeg"
+                        alt="Julia Chow"
+                        className="rounded-lg w-full md:w-auto max-w-[300px]"
+                      />
+                      <div>
+                        <div className="mb-2">
+                          <h3 className="text-lg font-bold text-textColor1">
+                            Amarpreet K.
+                          </h3>
+                          <p className="text-sm text-textColor1">New Driver</p>
+                        </div>
+                        <p className="text-textColor1">
+                          "I had my first lesson with East Van Driving School
+                          today, and it was an{" "}
+                          <span className="font-extrabold text-textColor1">
+                            {" "}
+                            amazing experience!
+                          </span>{" "}
+                          My instructor, Harkomal, was fantastic. He has
+                          excellent knowledge of driving and made me feel
+                          comfortable and confident. His friendly nature made
+                          the lesson enjoyable and stress-free. I highly
+                          recommend East Van Driving School for anyone looking
+                          to learn how to drive. Thank you, Harkomal, for such a
+                          great start to my driving journey!"
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="p-6">
-                  <div className="flex flex-col gap-4">
-                    <div className="flex items-center gap-4">
-                      <Image
-                        src="/images/drivingstudent2.jpg"
-                        alt="Rhonda R.."
-                        width={100}
-                        height={100}
-                        className="rounded-full object-cover"
+                <CardContent className="p-6 h-full">
+                  <div className="flex flex-col gap-4 h-full">
+                    <div className="flex flex-col xl:flex-row items-center gap-4 justify-center">
+                      <img
+                        src="/images/student3.jpeg"
+                        alt="Julia Chow"
+                        className="rounded-lg w-full md:w-auto max-w-[300px]"
                       />
                       <div>
-                        <h3 className="text-lg font-bold text-textColor1">
-                          Rhonda Wall
-                        </h3>
-                        <p className="text-sm text-textColor1">
-                          Passed First Time
+                        <div className="mb-2">
+                          <h3 className="text-lg font-bold text-textColor1">
+                            John C.
+                          </h3>
+                          <p className="text-sm text-textColor1">
+                            Passed First Time
+                          </p>
+                        </div>
+                        <p className="text-textColor1">
+                          "My experience with Harkomal was exceptional. As an
+                          instructor, he offers maximum flexibility to learners,
+                          which I truly appreciate. This approach helped me feel
+                          comfortable and confident throughout the learning
+                          process. I{" "}
+                          <span className="font-extrabold text-textColor1">
+                            {" "}
+                            highly recommend
+                          </span>{" "}
+                          this school to others seeking a great road test
+                          experience.
                         </p>
                       </div>
                     </div>
-                    <p className="text-textColor1">
-                      "
-                      <span className="font-extrabold">
-                        East Van Driving Academy
-                      </span>{" "}
-                      is fantastic! Harkomal is an excellent instructor who made
-                      driving lessons straightforward and relaxing. His clear
-                      instructions and flexible scheduling helped me
-                      <span className="font-extrabold text-textColor1">
-                        {" "}
-                        pass my road test
-                      </span>{" "}
-                      with ease. I highly recommend this driving school!"
-                    </p>
                   </div>
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="p-6">
-                  <div className="flex flex-col gap-4">
-                    <div className="flex items-center gap-4">
-                      <Image
-                        src="/images/drivingstudentm3.jpg"
-                        alt="Rhonda R.."
-                        width={100}
-                        height={100}
-                        className="rounded-full"
+                <CardContent className="p-6 h-full">
+                  <div className="flex flex-col gap-4 h-full">
+                    <div className="flex flex-col xl:flex-row items-center gap-4 justify-center">
+                      <img
+                        src="/images/student5.jpeg"
+                        alt="Julia Chow"
+                        className="rounded-lg w-full md:w-auto max-w-[300px]"
                       />
                       <div>
-                        <h3 className="text-lg font-bold text-textColor1">
-                          Nigel Kumuwende
-                        </h3>
-                        <p className="text-sm text-textColor1">
-                          Passed First Time
+                        <div className="mb-2">
+                          <h3 className="text-lg font-bold text-textColor1">
+                            Sanjeev K.
+                          </h3>
+                          <p className="text-sm text-textColor1">
+                            Passed First Time
+                          </p>
+                        </div>
+                        <p className="text-textColor1">
+                          "
+                          <span className="font-extrabold text-textColor1">
+                            Harkomal
+                          </span>{" "}
+                          is an energetic and professional driving instructor.
+                          He gave me clear instructions and guided me through my
+                          weaknesses. Highly recommended!"
                         </p>
                       </div>
                     </div>
-                    <p className="text-textColor1">
-                      "My experience with Harkonal was exceptional. As an
-                      instructor, he offers maximum flexibility to learners,
-                      which I truly appreciate. This approach helped me feel
-                      comfortable and confident throughout the learning process.
-                      I{" "}
-                      <span className="font-extrabold text-textColor1">
-                        {" "}
-                        highly recommend
-                      </span>{" "}
-                      this school to others seeking a great road test
-                      experience.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex flex-col gap-4">
-                    <div className="flex items-center gap-4">
-                      <Image
-                        src="/images/drivingstudent1.jpg"
-                        alt="Rhonda R.."
-                        width={100}
-                        height={100}
-                        className="rounded-full"
-                      />
-                      <div>
-                        <h3 className="text-lg font-bold text-textColor1">
-                          Julia Chow
-                        </h3>
-                        <p className="text-sm text-textColor1">
-                          Passed First Time
-                        </p>
-                      </div>
-                    </div>
-                    <p className="text-textColor1">
-                      "I had my first lesson with East Van Driving School today,
-                      and it was an{" "}
-                      <span className="font-extrabold text-textColor1">
-                        {" "}
-                        amazing experience!
-                      </span>{" "}
-                      My instructor, Harkomal, was fantastic. He has excellent
-                      knowledge of driving and made me feel comfortable and
-                      confident. His friendly nature made the lesson enjoyable
-                      and stress-free. I highly recommend East Van Driving
-                      School for anyone looking to learn how to drive. Thank
-                      you, Harkomal, for such a great start to my driving
-                      journey!"
-                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -444,6 +445,15 @@ export default function DrivingSchoolLanding() {
                   </CallButton>
                 </Link>
               </div>
+              <p className="mx-auto max-w-[600px] text-white/90 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Or send us an email at:{" "}
+                <a
+                  href="mailto:eastvandrivingacademy@gmail.com"
+                  className="text-blue-300 underline hover:text-blue-50"
+                >
+                  eastvandrivingacademy@gmail.com
+                </a>
+              </p>
             </div>
             <div className="mx-auto max-w-4xl h-[300px] mt-8 bg-white rounded-lg shadow-lg overflow-hidden">
               <GoogleMap />
@@ -452,18 +462,25 @@ export default function DrivingSchoolLanding() {
         </section>
       </main>
 
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-textColor1">
-        <p className="text-xs text-gray-200 dark:text-gray-200">
-          © 2024 EastVan Driving Academy. All rights reserved.
-        </p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Terms of Service
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Privacy
-          </Link>
-        </nav>
+      <footer className="flex flex-col sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-textColor1">
+        <div className="flex justify-between w-full">
+          <div className="flex justify-start">
+            <p className="text-xs text-gray-200 dark:text-gray-200">
+              © 2024 EastVan Driving Academy. All rights reserved.
+            </p>
+          </div>
+          <div className="flex justify-end items-center">
+            <p className="text-xs text-gray-200 dark:text-gray-200 flex items-center">
+              Made with <Heart className="h-4 w-4 m-1" /> by{" "}
+              <a
+                href="https://youwiniwin.ca/"
+                className="text-blue-500 hover:underline m-1"
+              >
+                ywiw
+              </a>
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
   );
