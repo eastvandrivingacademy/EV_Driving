@@ -118,7 +118,7 @@ export default function DrivingSchoolLanding() {
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                 <AnimatedCard
                   title="Experienced Instructors"
-                  description="Learn from certified professionals with years of experience."
+                  description="Our instructors are certified by ICBC and the Canadian Government"
                   icon={
                     <GraduationCap className="h-12 w-12 text-primary text-textColor1" />
                   } // Pass the icon as JSX element
@@ -141,8 +141,8 @@ export default function DrivingSchoolLanding() {
                 {/* Card Section */}
 
                 <AnimatedCard
-                  title="Personalized Lessons"
-                  description="Tailored instruction to meet your individual needs and pace."
+                  title="Wide Coverage"
+                  description="We offer our services in Vancouver, Richmond and Burnaby."
                   icon={
                     <Users className="h-12 w-12 text-primary text-textColor1" />
                   }
@@ -151,8 +151,8 @@ export default function DrivingSchoolLanding() {
               </div>
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                 <AnimatedCard
-                  title="Safety First"
-                  description="Our top priority is ensuring your safety on the road."
+                  title="Lessons for all levels"
+                  description="We provide driving lessons and knowledge test practice materials for Class 4,5 & 7."
                   icon={
                     <Award className="h-12 w-12 text-primary text-textColor1" />
                   } // Pass the icon as JSX element
@@ -212,7 +212,7 @@ export default function DrivingSchoolLanding() {
                   </div>
                   <ul className="space-y-2 text-center">
                     <li className="flex items-center justify-center">
-                      <Clock className="mr-2 h-4 w-4" />2 hour of lesson
+                      <Clock className="mr-2 h-4 w-4" />2 hour lesson
                     </li>
 
                     <li className="flex items-center justify-center">
@@ -328,24 +328,18 @@ export default function DrivingSchoolLanding() {
                       <div>
                         <div className="mb-2">
                           <h3 className="text-lg font-bold text-textColor1">
-                            Amarpreet K.
+                            Souravpreet Singh Sandhu
                           </h3>
-                          <p className="text-sm text-textColor1">New Driver</p>
+                          <p className="text-sm text-textColor1"> Passed First Time
+                          </p>
                         </div>
                         <p className="text-textColor1">
-                          "I had my first lesson with East Van Driving School
-                          today, and it was an{" "}
+                          "I had a{" "}
                           <span className="font-extrabold text-textColor1">
                             {" "}
-                            amazing experience!
+                            great experience
                           </span>{" "}
-                          My instructor, Harkomal, was fantastic. He has
-                          excellent knowledge of driving and made me feel
-                          comfortable and confident. His friendly nature made
-                          the lesson enjoyable and stress-free. I highly
-                          recommend East Van Driving School for anyone looking
-                          to learn how to drive. Thank you, Harkomal, for such a
-                          great start to my driving journey!"
+                            with my instructor at EastVan Driving Academy! They were incredibly patient and helped me build confidence behind the wheel. Each lesson was tailored to my learning pace, making the process smooth and enjoyable. The car was well-maintained, and my instructor’s knowledge of Vancouver’s roads and test routes really helped me feel prepared. Thanks to their guidance, I passed my road test with ease. Highly recommend EastVan Driving Academy if you’re looking for a skilled and supportive instructor!
                         </p>
                       </div>
                     </div>
@@ -407,13 +401,11 @@ export default function DrivingSchoolLanding() {
                           </p>
                         </div>
                         <p className="text-textColor1">
-                          "
+                          "I had a fantastic experience with{" "}
                           <span className="font-extrabold text-textColor1">
-                            Harkomal
+                          East Van Driving academy!
                           </span>{" "}
-                          is an energetic and professional driving instructor.
-                          He gave me clear instructions and guided me through my
-                          weaknesses. Highly recommended!"
+                            The instructors were incredibly patient, professional, and supportive throughout the entire learning process. They tailored the lessons to fit my needs and worked with me on areas where I needed extra practice, helping me build confidence and master skills for the ICBC road test. Their approach to teaching safe driving habits was practical and effective, making me feel fully prepared. Scheduling was easy, and they were accommodating with my availability. I highly recommend East Van Driving School to anyone looking for high-quality instruction and an encouraging learning environment
                         </p>
                       </div>
                     </div>
