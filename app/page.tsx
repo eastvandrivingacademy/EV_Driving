@@ -33,7 +33,7 @@ export default function DrivingSchoolLanding() {
           <span className="font-bold">EastVan Driving Academy</span> */}
           <div className="flex justify-center m-2 bg-bgColor1">
             <Image
-              src="/images/ev_logo_nobg.png"
+              src="/EV_Driving/images/ev_logo_nobg.png"
               alt="Sarah J."
               width={150}
               height={150}
@@ -92,7 +92,7 @@ export default function DrivingSchoolLanding() {
               {/* Image Section */}
               <div className="flex justify-center ">
                 <img
-                  src="/images/driving_hero.jpg"
+                  src="/EV_Driving/images/driving_hero.jpg"
                   alt="Driving"
                   className="max-w-full h-auto rounded-lg shadow-lg"
                   width={500}
@@ -125,7 +125,7 @@ export default function DrivingSchoolLanding() {
                 />
 
                 <AnimatedImage
-                  src="/images/drivingstudent1.jpg"
+                  src="/EV_Driving/images/drivingstudent1.jpg"
                   alt="Student learning to drive safely"
                 />
               </div>
@@ -133,7 +133,7 @@ export default function DrivingSchoolLanding() {
                 {/* Image Section */}
 
                 <AnimatedImage
-                  src="/images/drivingstudent2.jpg"
+                  src="/EV_Driving/images/drivingstudent2.jpg"
                   alt="Experienced instructor explaining road rules"
                   className="order-last lg:order-first" // Ensure the image is below the card on smaller screens
                 />
@@ -158,7 +158,7 @@ export default function DrivingSchoolLanding() {
                   } // Pass the icon as JSX element
                 />
                 <AnimatedImage
-                  src="/images/drivingstudentm3.jpg"
+                  src="/EV_Driving/images/drivingstudentm3.jpg"
                   alt="Student receiving personalized driving instruction"
                 />
               </div>
@@ -261,7 +261,7 @@ export default function DrivingSchoolLanding() {
         >
           <div className="flex justify-center mb-8 bg-white">
             <Image
-              src="/images/google_review.png"
+              src="/EV_Driving/images/google_review.png"
               alt="Sarah J."
               width={150}
               height={150}
@@ -283,7 +283,7 @@ export default function DrivingSchoolLanding() {
                   <div className="flex flex-col gap-4 h-full">
                     <div className="flex flex-col xl:flex-row items-center gap-4 justify-center">
                       <img
-                        src="/images/student1.jpeg"
+                        src="/EV_Driving/images/student1.jpeg"
                         alt="Julia Chow"
                         className="rounded-lg w-full md:w-auto max-w-[300px]"
                       />
@@ -321,7 +321,7 @@ export default function DrivingSchoolLanding() {
                   <div className="flex flex-col gap-4 h-full">
                     <div className="flex flex-col xl:flex-row items-center gap-4 justify-center">
                       <img
-                        src="/images/student2.jpeg"
+                        src="/EV_Driving/images/student2.jpeg"
                         alt="Julia Chow"
                         className="rounded-lg w-full md:w-auto max-w-[300px]"
                       />
@@ -351,7 +351,7 @@ export default function DrivingSchoolLanding() {
                   <div className="flex flex-col gap-4 h-full">
                     <div className="flex flex-col xl:flex-row items-center gap-4 justify-center">
                       <img
-                        src="/images/student3.jpeg"
+                        src="/EV_Driving/images/student3.jpeg"
                         alt="Julia Chow"
                         className="rounded-lg w-full md:w-auto max-w-[300px]"
                       />
@@ -387,7 +387,7 @@ export default function DrivingSchoolLanding() {
                   <div className="flex flex-col gap-4 h-full">
                     <div className="flex flex-col xl:flex-row items-center gap-4 justify-center">
                       <img
-                        src="/images/student5.jpeg"
+                        src="/EV_Driving/images/student5.jpeg"
                         alt="Julia Chow"
                         className="rounded-lg w-full md:w-auto max-w-[300px]"
                       />
