@@ -261,7 +261,7 @@ export default function DrivingSchoolLanding() {
         >
           <div className="flex justify-center mb-8 bg-white">
             <Image
-              src="/EV_driving/images/google_review.png"
+              src="/EV_Driving/images/google_review.png"
               alt="Sarah J."
               width={150}
               height={150}
