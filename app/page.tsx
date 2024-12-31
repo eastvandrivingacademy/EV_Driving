@@ -473,6 +473,6 @@ export default function DrivingSchoolLanding() {
     //     </div>
     //   </footer>
     // </div>
-    <div>please pay</div>
+    <div>Website blocked due to incomplete payment</div>
   );
 }
