@@ -69,7 +69,6 @@ export default function DrivingSchoolLanding() {
         </nav>
       </header>
       <main className="flex-1">
-      
         <section className="relative w-full py-12 md:py-24 lg:py-32 xl:py-12 bg-bgColor1">
           {/* Content */}
           <div className="px-4 md:px-6 flex justify-center w-full">
@@ -251,8 +250,8 @@ export default function DrivingSchoolLanding() {
               </Card>
             </div>
             <h2 className="text-xl font-medium tracking-tighter sm:text-3xl text-center m-4">
-              Receive a $50 discount for booking 5 lessons and $100 for 10
-              lessons today!
+              Receive a $50 discount for booking 5 lessons and $100 discount for
+              10 lessons today!
             </h2>
           </div>
         </section>
@@ -465,11 +464,11 @@ export default function DrivingSchoolLanding() {
         <div className="flex justify-between w-full">
           <div className="flex justify-start">
             <p className="text-xs text-gray-200 dark:text-gray-200">
-              © 2024 EastVan Driving Academy. All rights reserved.
+              © 2024 EastVan Driving Academy.
             </p>
           </div>
           <div className="flex justify-end items-center">
-            <p className="text-xs text-gray-200 dark:text-gray-200 flex items-center">
+            <p className="text-xs text-gray-200 flex items-center">
               Made with <Heart className="h-4 w-4 m-1" /> by{" "}
               <a
                 href="https://youwiniwin.ca/"
