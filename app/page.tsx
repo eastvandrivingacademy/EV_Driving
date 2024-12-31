@@ -33,7 +33,7 @@ export default function DrivingSchoolLanding() {
           <span className="font-bold">EastVan Driving Academy</span> */}
           <div className="flex justify-center m-2 bg-bgColor1">
             <Image
-              src="/images/ev_logo_nobg.png"
+              src="EV_Driving/images/ev_logo_nobg.png"
               alt="Sarah J."
               width={150}
               height={150}
