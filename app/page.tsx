@@ -270,7 +270,7 @@ export default function DrivingSchoolLanding() {
               </Card>
               <Card className="text-textColor1">
                 <CardHeader className='"flex items-center'>
-                  <CardTitle>10 Lesson Package Package</CardTitle>
+                  <CardTitle>10 Lesson Package</CardTitle>
                 </CardHeader>
                 <CardContent className="flex flex-col items-center space-y-4">
                   <div className="flex items-baseline justify-center">
