@@ -118,7 +118,7 @@ export default function DrivingSchoolLanding() {
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                 <AnimatedCard
                   title="Experienced Instructors"
-                  description="Our instructors are certified by ICBC and the Canadian Government"
+                  description="Our instructors are licensed under the Motor Vehicle Act."
                   icon={
                     <GraduationCap className="h-12 w-12 text-primary text-textColor1" />
                   } // Pass the icon as JSX element
@@ -248,11 +248,48 @@ export default function DrivingSchoolLanding() {
                   </CallButton>
                 </CardContent>
               </Card>
+              <Card className="text-textColor1">
+                <CardHeader className='"flex items-center'>
+                  <CardTitle>5 Lessons Package</CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-col items-center space-y-4">
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-5xl font-bold">$400</span>
+                  </div>
+                  <ul className="space-y-2 text-center">
+                  
+                    <li className="flex items-center justify-center">
+                      <Car className="mr-2 h-4 w-4" />
+                      Best for review
+                    </li>
+                  </ul>
+                  <CallButton className="w-full bg-textColor1">
+                    Book Now
+                  </CallButton>
+                </CardContent>
+              </Card>
+              <Card className="text-textColor1">
+                <CardHeader className='"flex items-center'>
+                  <CardTitle>10 Lesson Package Package</CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-col items-center space-y-4">
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-5xl font-bold">$780</span>
+                  </div>
+                  <ul className="space-y-2 text-center">
+                   
+                    <li className="flex items-center justify-center">
+                      <Car className="mr-2 h-4 w-4" />
+                      Best Value
+                    </li>
+                  </ul>
+                  <CallButton className="w-full bg-textColor1">
+                    Book Now
+                  </CallButton>
+                </CardContent>
+              </Card>
             </div>
-            <h2 className="text-xl font-medium tracking-tighter sm:text-3xl text-center m-4">
-              Receive a $50 discount for booking 5 lessons and $100 discount for
-              10 lessons today!
-            </h2>
+      
           </div>
         </section>
         <section
